@@ -141,67 +141,40 @@ footer {
   margin-top: 60px;
 }
 
-/* ========================= */
-/* MOBILE RESPONSIVE DESIGN */
-/* ========================= */
+
+/* Make everything scale nicely */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent overflow issues */
+body {
+  overflow-x: hidden;
+}
 
 @media (max-width: 768px) {
 
   /* HEADER */
   header {
-    padding: 15px 20px;
+    padding: 15px 15px;
   }
 
   header h1 {
     font-size: 18px;
   }
 
-  /* NAV STACK */
+  /* ✅ KEEP NAV HORIZONTAL */
   nav {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
+    flex-direction: row;     /* FIX */
+    flex-wrap: wrap;         /* allows wrapping instead of stacking */
+    justify-content: center; /* center it */
+    gap: 10px;
   }
 
   nav a {
-    display: block;
-    padding: 8px;
-  }
-
-  /* HERO */
-  .hero {
-    padding: 60px 15px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  /* SECTIONS */
-  .section {
-    padding: 40px 15px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  /* BOXES STACK */
-  .box-container {
-    flex-direction: column;
-  }
-
-  .box {
-    width: 100%;
-  }
-
-  /* CARDS */
-  .card {
-    padding: 20px;
+    font-size: 13px;
+    padding: 6px 8px;
   }
 
 }
